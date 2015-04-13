@@ -1,14 +1,14 @@
-<html ng-app="diwApp">
+<html ng-app="diwApp" ng-controller="baseCtrl">
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link href="../css/maestro.css" type="text/css" rel="stylesheet" media="screen">
-		<title>Inicio</title>
+		<title>{{ tituloAventura }}</title>
 	</head>
 
 	<body>
 		<section>
-			<div class="container" ng-controller="inicioCtrl">
+			<div class="container" ng-show="vivo == 1">
 				<span class="titulo">DARKNESS IS WAITING</span>
 				<br/>
 				<span class="subtitulo">THE CURSED CAVE</span>
@@ -24,12 +24,11 @@
 						<img src="../Fotos/antorcha.jpg" style="width: 250px; height: 300px;" />
 					</div>
 				</div>
-				<h1>{{ nombresito }}</h1>
 				<div class="row">
 					<table class="opciones" align="center">
 						<tr>
 							<td>
-								<a ng-click="muerte(1)">Intentar alcanzar la salida de la cueva por el agujero.</a>
+								<a ng-click="muerte(1,'Has muerto')">Intentar alcanzar la salida de la cueva por el agujero.</a>
 							</td>
 						</tr>
 						<tr>
@@ -44,9 +43,29 @@
 						</tr>
 					</table>
 				</div>
-				<input type="text" maxlength="10" style="color: red; font-size: 70px;" placeholder="Introdusca su nombresito." ng-model="nombresito">
-				<h1 ng-show="muerteNum == '1'">MUERISTE USTÉ</h1>
-				<h1 ng-show="muerteNum == '2'">MUERISTE USTÉ POR OPSIÓN 3. ESA NO ERA. ESA MALA.</h1>
+			</div>
+			<div class="container">
+				<div ng-show="muerteNum == '1'">
+					<span class="subtitulo">LO SIENTO</span>
+					<br/>
+					<img src="../Fotos/cueva.jpg" style="width: 470px; height: 300px;" />
+					<p>
+						Al intentar escalar, tropiezas con una piedra, caes al vacío y mueres irremediablemente. Nadie te recordará, salvo los insectos que devorarán tu cadáver, dándose un festín digno de un rey.
+					</p>
+					<br/>
+					<h1><a ng-click="resucitar()" class="resucitar">RESUCITAR</a></h1>
+				</div>
+
+				<div ng-show="muerteNum == '2'">
+					<span class="subtitulo">OOOOPS!</span>
+					<br/>
+					<br/>
+					<p>
+						Vaya, parece que has entrado en un túnel totalmente oscuro, y cuando avanzaste unos pasos, alguien (o algo) se te lanzó a tu espalda y, a pesar de tus inútiles esfuerzos y tus gritos de niña de cinco años, tus brazos y piernas acabaron por separarse de tu feo cuerpo...
+					</p>
+					<br/>
+					<h1><a ng-click="resucitar(1)" class="resucitar">RESUCITAR</a></h1>
+				</div>
 			</div>
 		</section>
 

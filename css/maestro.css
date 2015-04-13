@@ -14,12 +14,13 @@ img {
 .subtitulo {
 	font-size: 30px;
 }
-table.opciones a{
+table.opciones a, .resucitar {
 	color: #FFFF2E;
 }
-table.opciones tr:hover {
+table.opciones tr:hover, .resucitar:hover {
 	background-color: #111111;
 	text-decoration: underline;
+	color: #FFFF2E;
 }
 #comienza {
 	font-size: 25px;
