@@ -1,0 +1,1 @@
+var diwApp = angular.module("diwApp", ['ui-router']);
