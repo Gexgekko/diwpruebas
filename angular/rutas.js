@@ -6,6 +6,10 @@ diwApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
     	{ 
     		templateUrl: '../plantillas/inicio.html',
             //controller: 'InicioCtrl'
-    	});
+    	})
+    	.state('segundo',
+    	{
+    		templateUrl: "../plantillas/segundo.html"
+    	})
 	}
 ]);
