@@ -4,15 +4,22 @@ body {
 	text-align: center;
 	font-size: 16px;
 }
-
+img {
+	margin: 15px;
+	margin-bottom: 20px;
+}
 .titulo {
 	font-size: 50px;
 }
 .subtitulo {
 	font-size: 30px;
 }
-td:hover {
-	background-color: red;
+table.opciones a{
+	color: #FFFF2E;
+}
+table.opciones tr:hover {
+	background-color: #111111;
+	text-decoration: underline;
 }
 #comienza {
 	font-size: 25px;

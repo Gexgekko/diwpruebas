@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link href="../css/maestro.css" type="text/css" rel="stylesheet" media="screen">
 		<title>Inicio</title>
@@ -14,21 +14,36 @@
 		</div>
 		<br/>
 		<div class="container">
-			<p id="comienza">COMIENZA EL JUEGO... ACÁBALO SI PUEDES</p>
-			<br/>
-			<p>Te despiertas en una cueva sin recordar nada. Te encuentras en un claro de luz que es arrojada desde un agujero en el techo, el cual está demasiado alto para alcanzarlo. A tu lado solo tienes una antorcha, pero hay demasiada luz para encontrarle utilidad, no te serviría...¿O tal vez sí? Tú decides, es tu vida.</p>
-			<img src="../Fotos/cueva.jpg" />
-			<table class="table-hover">
-				<tr>
-					<td>Línea 1</td>
-				</tr>
-				<tr>
-					<td>Línea 2</td>
-				</tr>
-				<tr>
-					<td>Línea 3</td>
-				</tr>
-			</table>
+			<div class="row">
+				<p id="comienza">COMIENZA EL JUEGO... ACÁBALO SI PUEDES</p>
+				<br/>
+				<p>Te despiertas en una cueva sin recordar nada. Te encuentras en un claro de luz que es arrojada desde un agujero en el techo, el cual está demasiado alto para alcanzarlo. A tu lado solo tienes una antorcha, pero hay demasiada luz para encontrarle utilidad, no te serviría...¿O tal vez sí? Tú decides, es tu vida.</p>
+				<div class="col-md-6 pull-left">
+					<img src="../Fotos/cueva.jpg" style="width: 470px; height: 300px;" />
+				</div>
+				<div class="col-md-6 pull-right">
+					<img src="../Fotos/antorcha.jpg" style="width: 250px; height: 300px;" />
+				</div>
+			</div>
+			<div class="row">
+				<table class="opciones" align="center">
+					<tr>
+						<td>
+							<a href="../Esp/Muerte1.html">Intentar alcanzar la salida de la cueva por el agujero.</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../Esp/P1Esp.html">Coger la antorcha y explorar la cueva.</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../Esp/Muerte2.html">Ignorar la antorcha y explorar la cueva</a>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>
