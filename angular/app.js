@@ -1,1 +1,1 @@
-var diwApp = angular.module('diwApp', ['ui-router']);
+var diwApp = angular.module('diwApp',['ui.router']);
