@@ -1,3 +1,53 @@
 <section>
-	Hola
+	<div class="pull-right">The cursed cave</div>
+	<div class="container" ng-show="vivo == 1">
+		<p>
+			Coges la antorcha y empiezas a caminar, temblando de miedo y la antorcha se tambalaea violentamente. Tu respiración se agita y empiezas a sudar. No recuerdas ni siquiera tu propio nombre, a penas te queda memoria como para sobrevivir... bueno, se supone.
+		</p>
+		<p>
+			Estás caminando y de repente oyes ruidos extraños, como almas susurrando con desasosiego.
+		</p>
+		<br/>
+		<img style="width: 400px; height: 310px;" alt="" title="Antorcha" src="../Fotos/antorcha2.jpg">
+		<br/>
+		<table class="opciones" align="center">
+			<tr>
+				<td>
+					<a ng-click="muerte(1,'Has muerto')">Intentas buscar el origen del ruido mientras agitas la antorcha con nerviosismo.</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a ui-sref="segundo">Empiezas a correr gritando, como si alguien pudiera oirte.</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a ng-click="muerte(2,'Has muerto')">Te quedas quieto, pensando que así estarás seguro.</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<div ng-show="muerteNum == '1'">
+			<span class="subtitulo">NO TE IRRITES...</span>
+			<br/>
+			<img src="../Fotos/cueva.jpg" style="width: 470px; height: 300px;" />
+			<p>
+				No te pongas nervioso... el movimiento de tu antorcha a provocado la furia de "algo" y te ha arrancado las tripas. agoniznando, pierdes las fuerzas y la antorcha se apaga... al igual que tu vida.
+			</p>
+			<br/>
+			<h1><a ng-click="resucitar()" class="resucitar">RESUCITAR</a></h1>
+		</div>
+		<div ng-show="muerteNum == '2'">
+			<span class="subtitulo">Asúmelo, este no es tu juego</span>
+			<br/>
+			<img style="width: 356px; height: 227px;" alt="" title="Sangre" src="../Fotos/sangre.jpg">
+			<p>
+				Al correr, tropiezas con algo y caes, dejando tu cara como una obra de arte moderno... aunque la diferencia sólo la aprecias tú... A tus espaldas, "algo" pretende tomar tus tripas de postre y tus huesos de cena... o todo a la vez, ¿a quién le importa? A ti desde luego que no, porque ¡estás muerto!
+			</p>
+			<br/>
+			<h1><a ng-click="resucitar(1)" class="resucitar">RESUCITAR</a></h1>
+		</div>
+	</div>
 </section>
