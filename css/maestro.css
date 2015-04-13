@@ -1,4 +1,19 @@
-* {
+body {
 	background-color: black;
 	color: white;
+	text-align: center;
+	font-size: 16px;
+}
+
+.titulo {
+	font-size: 50px;
+}
+.subtitulo {
+	font-size: 30px;
+}
+td:hover {
+	background-color: red;
+}
+#comienza {
+	font-size: 25px;
 }
