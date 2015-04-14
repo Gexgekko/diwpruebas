@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ANG=$(cat angular/*.js | wc -1)
+echo "En angular hay $ANG"
+CSS=$(cat css/*.css | wc -l)
+echo "En css hay $CSS"
+PLANT=$(cat plantillas/*.html | wc -l)
+echo "En plantillas hay $PLANT"
+PRUEB=$(cat pruebas/*.html | wc -l)
+echo "En pruebas hay $PRUEB"
+ESTO=$(cat *.html | wc -l)
+echo "En la raiz hay $ESTO"
+let SUMA=ANG+CSS+PLANT+PRUEB+ESTO
+echo "Total: $SUMA"

@@ -1,5 +1,4 @@
 <section>
-
 	<div class="container" ng-show="vivo == 1">
 		<br/>
 		<br/>
@@ -10,7 +9,31 @@
 		<p>
 			(Si no has entendido el concepto de juego INTERACTIVO, haz click en la imagen para seleccionar el objeto que te salvará la vida)
 		</p>
-		<a><img style="width: 320px; height: 235px;" class="col-md-4" src="../Fotos/mechero.jpg"></a>
-		<a><img style="width: 260px; height: 195px;" class="col-md-4" src="../Fotos/pistola.jpeg"></a>
-		<a><img style="width: 375px; height: 250px;" class="col-md-4" src="../Fotos/cantimplora.jpg"></a>
+		<a ui-sref="cuarto" ng-click="titAv('Continua tu aventura')"><img style="width: 320px; height: 235px;" class="col-md-4" src="../Fotos/mechero.jpg"></a>
+		<a ng-click="muerte(1,'Has muerto')"><img style="width: 260px; height: 195px;" class="col-md-4" src="../Fotos/pistola.jpeg"></a>
+		<a ng-click="muerte(2,'Has muerto')"><img style="width: 375px; height: 250px;" class="col-md-4" src="../Fotos/cantimplora.jpg"></a>
 	</div>
+
+	<div class="container">
+		<div ng-show="muerteNum == '1'">
+			<span class="subtitulo">¿Una pistola? ¿En serio?</span>
+			<br/>
+			<img style="width: 260px; height: 195px;" src="../Fotos/pistola.jpeg">
+			<p>
+				Instintivamente coges el arma, compruebas si el arma está cargada, y sí, lo está... De repente escuchas otra vez ese susurro desgarrador y algo se mueve ferozmente a tus espaldas... ¿Piensas dejarlo vivir? De un salto te colocas frente a la extraña silueta y aprietas el gatillo, pero ¡oh! se ha encasquillado, ¡qué lástima! No, en serio, el arma no era la mejor opción, tus entrañas lo saben, ese "algo" que te ha matado lo sabe, todos menos tú saben que no deberías haber escogido la pistola...
+			</p>
+			<br/>
+			<h1><a ng-click="resucitar('Continua tu aventura')" class="resucitar">RESUCITAR</a></h1>
+		</div>
+		<div ng-show="muerteNum == '2'">
+			<span class="subtitulo">Uh, ese líquido que nos da la vida... y nos la quita...</span>
+			<br/>
+			<img style="width: 375px; height: 250px;" src="../Fotos/cantimplora.jpg">
+			<p>
+				Te entra sed y decides beber un poco, pero tu prisa te hace toser, cosa mala cuando tu vida depende de la estabilidad de una antorcha débilmente sujeta en tu mano... La fuente de luz cae y se apaga, condenandote al dolor, conviriéndote en la comida de "algo" más fuerte y ágil que tú.
+			</p>
+			<br/>
+			<h1><a ng-click="resucitar('Continua tu aventura')" class="resucitar">RESUCITAR</a></h1>
+		</div>
+	</div>
+</section>
