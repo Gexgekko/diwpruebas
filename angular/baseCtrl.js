@@ -10,9 +10,9 @@ diwApp.controller('baseCtrl',function($scope, $state){
 		$scope.tituloAventura = texto;
 		$scope.vivo = 0;
 	}
-	$scope.resucitar = function(){
+	$scope.resucitar = function(titulo){
 		$scope.muerteNum = 0;
 		$scope.vivo = 1;
-		$scope.tituloAventura = 'Inicio';
+		$scope.tituloAventura = titulo;
 	}
 })
