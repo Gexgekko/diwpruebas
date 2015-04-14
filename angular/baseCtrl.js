@@ -2,6 +2,9 @@ diwApp.controller('baseCtrl',function($scope, $state){
 	$state.go('inicio');
 	$scope.vivo = 1;
 	$scope.tituloAventura = 'Inicio';
+	$scope.titAv = function(titulo){
+		$scope.tituloAventura = titulo;
+	}
 	$scope.muerte = function(numero, texto){
 		$scope.muerteNum = numero;
 		$scope.tituloAventura = texto;
