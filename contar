@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ANG=$(cat angular/*.js | wc -1)
+ANG=$(cat angular/*.js | wc -l)
 echo "En angular hay $ANG"
 CSS=$(cat css/*.css | wc -l)
 echo "En css hay $CSS"
