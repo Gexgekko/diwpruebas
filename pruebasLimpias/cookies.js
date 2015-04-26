@@ -1,5 +1,5 @@
 var diwCookieApp = angular.module('diwCookieApp',['ngCookies']);
-diwCookieApp.controller('CookieCtrl',function($scope,$cookieStore,$interval){
+diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',function($scope,$cookieStore,$interval){
 	//Cookies normales
 	$scope.verTexto = function (){
 		$scope.textoVer = $scope.textoIntroducido;
@@ -12,10 +12,10 @@ diwCookieApp.controller('CookieCtrl',function($scope,$cookieStore,$interval){
 	}
 
 	//Cookies con interval
-	$interval(function (){
+	var guardado = $interval(function (){
 		$cookieStore.put('DIWCookieIntervalo', $scope.cookieCargadaIntervalo);
 	},10000);
-	$interval(function (){
+	var cargado = $interval(function (){
 		$scope.cookieLeidaIntervalo = $cookieStore.get('DIWCookieIntervalo');
 	},10000);
-});
+}]);
