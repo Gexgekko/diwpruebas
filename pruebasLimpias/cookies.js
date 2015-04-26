@@ -13,9 +13,11 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 
 	//Cookies con interval
 	var guardado = $interval(function (){
-		$cookieStore.put('DIWCookieIntervalo', $scope.cookieCargadaIntervalo);
+		var cookieMeter = { "nombre":"cookiesita", "textito":$scope.cookieCargadaIntervalo }
+		$cookieStore.put('DIWCookieIntervalo', cookieMeter);
 	},10000);
 	var cargado = $interval(function (){
-		$scope.cookieLeidaIntervalo = $cookieStore.get('DIWCookieIntervalo');
+		var cookieObjeto = $cookieStore.get('DIWCookieIntervalo');
+		$scope.cookieLeidaIntervalo = cookieObjeto.textito
 	},10000);
 }]);
