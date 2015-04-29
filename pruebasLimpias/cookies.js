@@ -33,9 +33,10 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 		console.log('Cargo inventario')
 		console.log($scope.inventario);
 	}
+	$scope.cargarInventario();
 	$scope.$watch('inventario.itemCabeza',function(newValue, oldValue){
-		if(newValue == oldValue){
-			console.log('No cambiaste nada de la cabeza, pamplina, no elijas la misma opción');
+		if(oldValue == 'CaritaFelis' && newValue == 'CaritaTriste'){
+			console.log('Has pasado de '+oldValue+' a '+newValue+', estás deprimido? (Easter Egg de caritas)');	
 		}else{
 			console.log('Cambiaste de '+oldValue+' a '+newValue+' el item de la cabeza');
 		}
