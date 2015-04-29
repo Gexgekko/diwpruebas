@@ -33,5 +33,12 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 		console.log('Cargo inventario')
 		console.log($scope.inventario);
 	}
+	$scope.$watch('inventario.itemCabeza',function(newValue, oldValue){
+		if(newValue == oldValue){
+			console.log('No cambiaste nada de la cabeza, pamplina, no elijas la misma opción');
+		}else{
+			console.log('Cambiaste de '+oldValue+' a '+newValue+' el item de la cabeza');
+		}
+	})
 	$scope.cargarInventario();
 }]);
