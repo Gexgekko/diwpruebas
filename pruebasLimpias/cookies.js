@@ -39,11 +39,10 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 		if(contador>0){
 			if(oldValue == 'CaritaFelis' && newValue == 'CaritaTriste'){
 				console.log('Has pasado de '+oldValue+' a '+newValue+', estás deprimido? (Easter Egg de caritas)');
-				contador++;
 			}else{
 				console.log('Cambiaste de '+oldValue+' a '+newValue+' el item de la cabeza');
-				contador++;
 			}
+			contador++;
 		}
 	})
 	$scope.cargarInventario();
