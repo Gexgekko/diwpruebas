@@ -23,13 +23,13 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 
 
 	//Cookies de INVENTARIO
-	$scope.inventario = { "itemCabeza":"Nada.", "itemCodoIzquierdo":"Nada", "itemCodoDerecho":"Universo." };
+	$scope.cargarInventario();
 	$scope.guardarInventario = function(){
 		$cookieStore.put('DIWCookieInventario', $scope.inventario);
 		console.log('Guardo inventario')
 	}
 	$scope.cargarInventario = function(){
-		var inventario = $cookieStore.get('DIWCookieInventario');
+		$scope.inventario = $cookieStore.get('DIWCookieInventario');
 		console.log('Cargo inventario')
 		console.log(inventario);
 	}
