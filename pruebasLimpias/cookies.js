@@ -20,4 +20,15 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 		var cookieObjeto = $cookieStore.get('DIWCookieIntervalo');
 		$scope.cookieLeidaIntervalo = cookieObjeto.textito
 	},10000);
+
+
+	//Cookies de INVENTARIO
+	$scope.inventario = { "itemCabeza":"Nada.", "itemCodoIzquierdo":"Nada", "itemCodoDerecho":"Universo." };
+	$scope.guardarInventario = function(){
+		$cookieStore.put('DIWCookieInventario', $scope.inventario);
+	}
+	$scope.cargarInventario = function(){
+		var inventario = $cookieStore.get('DIWCookieInventario');
+	}
+
 }]);
