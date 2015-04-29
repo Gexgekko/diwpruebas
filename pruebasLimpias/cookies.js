@@ -34,16 +34,11 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 		console.log($scope.inventario);
 	}
 	$scope.cargarInventario();
-	var contador = 0;
 	$scope.$watch('inventario.itemCabeza',function(newValue, oldValue){
-		if(contador>0){
-			if(oldValue == 'CaritaFelis' && newValue == 'CaritaTriste'){
-				console.log('Has pasado de '+oldValue+' a '+newValue+', estás deprimido? (Easter Egg de caritas)');
-			}else{
-				console.log('Cambiaste de '+oldValue+' a '+newValue+' el item de la cabeza');
-			}
+		if(oldValue == 'CaritaFelis' && newValue == 'CaritaTriste'){
+			console.log('Has pasado de '+oldValue+' a '+newValue+', estás deprimido? (Easter Egg de caritas)');
+		}else{
+			console.log('Cambiaste de '+oldValue+' a '+newValue+' el item de la cabeza');
 		}
-		contador++;
 	})
-	$scope.cargarInventario();
 }]);
