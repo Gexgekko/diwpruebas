@@ -25,6 +25,7 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 	//Cookies de INVENTARIO
 	
 	$scope.guardarInventario = function(){
+		$scope.inventario.itemCodoDerecho = "Universo";
 		$cookieStore.put('DIWCookieInventario', $scope.inventario);
 		console.log('Guardo inventario')
 	}
