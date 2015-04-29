@@ -31,7 +31,7 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 	$scope.cargarInventario = function(){
 		$scope.inventario = $cookieStore.get('DIWCookieInventario');
 		console.log('Cargo inventario')
-		console.log(inventario);
+		console.log($scope.inventario);
 	}
 	$scope.cargarInventario();
 }]);
