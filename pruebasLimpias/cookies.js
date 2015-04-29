@@ -42,8 +42,8 @@ diwCookieApp.controller('CookieCtrl',['$scope','$cookieStore','$interval',functi
 			}else{
 				console.log('Cambiaste de '+oldValue+' a '+newValue+' el item de la cabeza');
 			}
-			contador++;
 		}
+		contador++;
 	})
 	$scope.cargarInventario();
 }]);
